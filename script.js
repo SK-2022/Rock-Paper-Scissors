@@ -5,6 +5,7 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
+  playerSelection = playerSelection.toLowerCase();
   if (playerSelection == "rock" && computerSelection === "scissors") {
     return "Rock beats scissors! You win! Here's a cookie!";
   } else if (playerSelection == "rock" && computerSelection === "rock") {
