@@ -9,6 +9,7 @@ function computerPlay(play) {
 
 function playRound(playerSelection, computerSelection) {
   playerSelection = playerSelection.toLowerCase(); 
+  prompt("Rock, Paper or Scissors?", playerSelection)
   if (playerSelection === "rock" && computerSelection === "scissors") {
     playerScore++;
     return "Rock beats scissors! You win! Here's a cookie!";
