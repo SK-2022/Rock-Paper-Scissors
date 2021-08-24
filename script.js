@@ -50,23 +50,36 @@ function playRound(playerSelection, computerSelection) {
   }
 
 }
+    const rockBtn = document.createElement("button");
+    rockBtn.textContent = "Rock";
+    document.body.append(rockBtn);
 
-function game(playerSelection, numberOfRounds) {
-  for (let i = 0; i < numberOfRounds; i++) {
-    let playRoundFunction = playRound(playerSelection, computerPlay(play));
-    console.log(playRoundFunction);
-  } 
+    const paperBtn = document.createElement("button");
+    paperBtn.textContent = "Paper";
+    document.body.append(paperBtn);
+
+    const scissorsBtn = document.createElement("button");
+    scissorsBtn.textContent = "Scissors";
+    document.body.append(scissorsBtn);
+
+// function game(playerSelection, numberOfRounds) {
+//   for (let i = 0; i < numberOfRounds; i++) {
+//     let playRoundFunction = playRound(playerSelection, computerPlay(play));
+//     console.log(playRoundFunction);
+//   } 
   
-  if (playerScore > computerScore) {
-    return "Player Wins! Congratulations!"
+//   if (playerScore > computerScore) {
+//     return "Player Wins! Congratulations!"
 
-  } else if (playerScore < computerScore) {
-    return "Computer Wins! Try again!"
+//   } else if (playerScore < computerScore) {
+//     return "Computer Wins! Try again!"
 
-  } else if (playerScore === computerScore) {
-    return "Its a Tie!"
+//   } else if (playerScore === computerScore) {
+//     return "Its a Tie!"
     
-  } else {
-    return "Whoops, something went wrong!"
-  }
-}
+//   } else {
+//     return "Whoops, something went wrong!"
+//   }
+// }
+
+//This is a test. Its my first time pushing to a branch. 
