@@ -50,17 +50,45 @@ function playRound(playerSelection, computerSelection) {
   }
 
 }
+
     const rockBtn = document.createElement("button");
-    rockBtn.textContent = "Rock";
+
     document.body.append(rockBtn);
 
+    rockBtn.textContent = "Rock";
+
+    rockBtn.setAttribute("id","rockButton")
+
+    const rockButton = document.querySelector("#rockButton")
+
+    rockButton.addEventListener('click', () => {
+      
+      return playRound("rock",computerPlay(play));
+    
+    }); 
+    
+
     const paperBtn = document.createElement("button");
-    paperBtn.textContent = "Paper";
     document.body.append(paperBtn);
+    paperBtn.textContent = "Paper";
+    paperBtn.setAttribute("id","paperButton")
+    const paperButton = document.querySelector("#paperButton")
+    paperButton.addEventListener('click', () => {
+
+        return playRound("paper",computerPlay(play));
+  
+  });
 
     const scissorsBtn = document.createElement("button");
-    scissorsBtn.textContent = "Scissors";
     document.body.append(scissorsBtn);
+    scissorsBtn.textContent = "Scissors";
+    scissorsBtn.setAttribute("id","scissorsButton")
+    const scissorsButton = document.querySelector("#scissorsButton")
+    scissorsButton.addEventListener('click', () => {
+      
+      return playRound("scissors",computerPlay(play))
+
+  })
 
 // function game(playerSelection, numberOfRounds) {
 //   for (let i = 0; i < numberOfRounds; i++) {
@@ -81,5 +109,3 @@ function playRound(playerSelection, computerSelection) {
 //     return "Whoops, something went wrong!"
 //   }
 // }
-
-//This is a test. Its my first time pushing to a branch. 
