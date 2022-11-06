@@ -10,13 +10,13 @@ function computerPlay(play) {
 function playRound(playerSelection, computerSelection) {
   playerSelection = playerSelection.toLowerCase(); 
   prompt("Rock, Paper or Scissors?", playerSelection)
-  if (playerSelection === "rock" && computerSelection === "scissors") {
+  if(playerSelection === computerSelection){  
+    return "Immovable object meets unbending will! Its a tie!"
+    
+  } else if(playerSelection === "rock" && computerSelection === "scissors") {
     playerScore++;
     return "Rock beats scissors! You win! Here's a cookie!";
     
-  } else if (playerSelection === "rock" && computerSelection === "rock") {
-    return "Rock meets rock! Its a tie! Play again to decide the victor!";
-
   } else if (playerSelection === "rock" && computerSelection === "paper") {
     computerScore++;
     return "Rock is covered by paper! You have been defeated!Play again for revenge!";
@@ -25,9 +25,6 @@ function playRound(playerSelection, computerSelection) {
     playerScore++;
     return "Paper beats rock, you win! Here's a cookie!"
 
-  } else if (playerSelection === "paper" && computerSelection === "paper") {
-    return "Paper meets paper! Its a tie! Play again to decide the victor!";
-
   } else if (playerSelection === "paper" && computerSelection === "scissors") {
     computerScore++;
     return "Paper is sliced by scissors! You have been defeated! Play again for revenge";
@@ -35,10 +32,6 @@ function playRound(playerSelection, computerSelection) {
   } else if (playerSelection === "scissors" && computerSelection === "paper") {
     playerScore++;
     return "Scissors beats rock! You win! Here's a cookie!";
-
-  } else if (
-    playerSelection === "scissors" && computerSelection === "scissors") {
-    return "Scissors meets scissors! Its a tie! Play again to decide the victor!";
 
   } else if (playerSelection === "scissors" && computerSelection === "rock") {
     computerScore++;
