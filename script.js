@@ -1,39 +1,41 @@
-let play = ["rock", "paper", "scissors"];
+const play = ["rock", "paper", "scissors"];
 let computerScore = 0;
 let playerScore = 0;
 
 
-function computerPlay(play) {
-  return play[Math.floor(Math.random() * play.length)];
-}
 
-function playRound(playerSelection, computerSelection) {
+
+function playRound(playerSelection) {
   playerSelection = playerSelection.toLowerCase(); 
-  prompt("Rock, Paper or Scissors?", playerSelection)
-  if(playerSelection === computerSelection){  
-    return "Immovable object meets unbending will! Its a tie!"
-    
-  } else if(playerSelection === "rock" && computerSelection === "scissors") {
-    playerScore++;
-    return "Rock beats scissors! You win! Here's a cookie!";
-    
-  } else if (playerSelection === "rock" && computerSelection === "paper") {
-    computerScore++;
-    return "Rock is covered by paper! You have been defeated!Play again for revenge!";
+  // prompt("Rock, Paper or Scissors?", playerSelection)
+  function computerPlay(play) {
+    return play[Math.floor(Math.random() * play.length)];
+  }
 
-  } else if (playerSelection === "paper" && computerSelection === "rock") {
+  if(playerSelection === computerPlay(play)){  
+    console.log("Immovable object meets unbending will! Its a tie!")
+    
+  } else if(playerSelection === "rock" && computerPlay(play) === "scissors") {
+    playerScore++;
+    console.log("Rock beats scissors! You win! Here's a cookie!")
+    
+  } else if (playerSelection === "rock" && computerPlay(play) === "paper") {
+    computerScore++;
+    console.log("Rock is covered by paper! You have been defeated!Play again for revenge!")
+
+  } else if (playerSelection === "paper" && computerPlay(play) === "rock") {
     playerScore++;
     return "Paper beats rock, you win! Here's a cookie!"
 
-  } else if (playerSelection === "paper" && computerSelection === "scissors") {
+  } else if (playerSelection === "paper" && computerPlay(play) === "scissors") {
     computerScore++;
     return "Paper is sliced by scissors! You have been defeated! Play again for revenge";
 
-  } else if (playerSelection === "scissors" && computerSelection === "paper") {
+  } else if (playerSelection === "scissors" && computerPlay(play) === "paper") {
     playerScore++;
     return "Scissors beats rock! You win! Here's a cookie!";
 
-  } else if (playerSelection === "scissors" && computerSelection === "rock") {
+  } else if (playerSelection === "scissors" && computerPlay(play) === "rock") {
     computerScore++;
     return "Scissors is smashed by rock! You have been defeated! Play again for revenge!";
 
