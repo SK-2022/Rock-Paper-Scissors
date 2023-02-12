@@ -16,9 +16,6 @@ function playRound (playerSelection, computerSelection){
     computerSelection = getComputerChoice()
     //Gets playerSelection and converts the input to lowercase.
     playerSelection = playerSelection.toLowerCase()
-   //Displays scores on the DOM
-    playerScoreCount.innerText = playerScore
-    computerScoreCount.innerText = computerScore
 
     if(computerSelection === playerSelection){
         matchResult.innerText = "Heads lock! It's a tie!!"
@@ -42,6 +39,19 @@ function playRound (playerSelection, computerSelection){
         matchResult.innerText = "You lose! Scissors beats paper"
     } else {
         matchResult.innerText = "Input Error"
+    }
+    //Displays scores on the DOM
+    playerScoreCount.innerText = playerScore
+    computerScoreCount.innerText = computerScore
+
+    if(computerScore < 5 && playerScore < 5) {
+        finalMatchResult.innerText = "No winner just yet...."
+    } else if(playerScore === 5) {
+        finalMatchResult.innerText = "JACKPOT BABY, YOU WON!"
+    } else if(computerScore === 5) {
+        finalMatchResult.innerText = "UNDER THE BRIDGE FOR YOU! YOU LOST!"
+    } else {
+        finalMatchResult.innerText = "The battle shall continue for eternity"
     }
 
 }
