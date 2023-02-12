@@ -58,7 +58,17 @@ function playRound (playerSelection, computerSelection){
 const rock = document.querySelector('.rock-selection')
 
 rock.addEventListener('click', () => {
-
     playRound(rock.innerText, getComputerChoice())
+})
 
+const paper = document.querySelector('.paper-selection')
+
+paper.addEventListener('click', () => {
+    playRound(paper.innerText, getComputerChoice())
+})
+
+const scissors = document.querySelector('.scissors-selection')
+//Does the same as above, simply with a slightly different syntax
+scissors.addEventListener('click', function (e) {
+    playRound(scissors.innerText, getComputerChoice())
 })
