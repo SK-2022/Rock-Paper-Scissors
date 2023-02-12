@@ -14,8 +14,11 @@ const finalMatchResult = document.querySelector('.final-match-result')
 
 function playRound (playerSelection, computerSelection){
     computerSelection = getComputerChoice()
-    //Gets playerSelection from a prompt which converts the input to a lowercase string.
+    //Gets playerSelection and converts the input to lowercase.
     playerSelection = playerSelection.toLowerCase()
+   //Displays scores on the DOM
+    playerScoreCount.innerText = playerScore
+    computerScoreCount.innerText = computerScore
 
     if(computerSelection === playerSelection){
         matchResult.innerText = "Heads lock! It's a tie!!"
@@ -40,7 +43,7 @@ function playRound (playerSelection, computerSelection){
     } else {
         matchResult.innerText = "Input Error"
     }
-    
+
 }
 
 // function game(numberOfRounds){
