@@ -10,7 +10,7 @@ let playerScore = 0
 function playRound (playerSelection, computerSelection){
     computerSelection = getComputerChoice()
     //Gets playerSelection from a prompt which converts the input to a lowercase string.
-    playerSelection = prompt('Choose your weapon! Rock Paper Scissors').toLowerCase()
+    playerSelection = playerSelection.toLowerCase()
 
     if(computerSelection === playerSelection){
         console.log( "Heads lock! It's a tie!!")
@@ -38,19 +38,27 @@ function playRound (playerSelection, computerSelection){
 
 }
 
-function game(numberOfRounds){
-    for (let i = 0; i < numberOfRounds; i++){
-        playRound()
-    }
-    if(playerScore === computerScore) {
-        console.log('OMG Its a tie!')
-    } else if(playerScore > computerScore) {
-        console.log('JACKPOT BABY, YOU WON!')
-    } else if(playerScore < computerScore){
-        console.log('UNDER THE BRIDGE FOR YOU. YOU LOST!')
-    } else{
-        console.log('This function is broken!')
-    }
-}
+// function game(numberOfRounds){
+//     for (let i = 0; i < numberOfRounds; i++){
+//         playRound()
+//     }
+//     if(playerScore === computerScore) {
+//         console.log('OMG Its a tie!')
+//     } else if(playerScore > computerScore) {
+//         console.log('JACKPOT BABY, YOU WON!')
+//     } else if(playerScore < computerScore){
+//         console.log('UNDER THE BRIDGE FOR YOU. YOU LOST!')
+//     } else{
+//         console.log('This function is broken!')
+//     }
+// }
 
-console.log(game(5))
+// console.log(game(5))
+
+const rock = document.querySelector('.rock-selection')
+
+rock.addEventListener('click', () => {
+
+    playRound(rock.innerText, getComputerChoice())
+
+})
