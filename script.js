@@ -1,6 +1,7 @@
 function getComputerChoice() {
     let options = ['rock','paper','scissors']
-    // Returns index 0, 1 or 2 from the options array randomly 
+
+    // Returns element at index 0, 1 or 2 from the options array randomly 
     return options[Math.floor(Math.random() * 3)]
 }
 
@@ -55,23 +56,6 @@ function playRound (playerSelection, computerSelection){
     }
 
 }
-
-// function game(numberOfRounds){
-//     for (let i = 0; i < numberOfRounds; i++){
-//         playRound()
-//     }
-//     if(playerScore === computerScore) {
-//         console.log('OMG Its a tie!')
-//     } else if(playerScore > computerScore) {
-//         console.log('JACKPOT BABY, YOU WON!')
-//     } else if(playerScore < computerScore){
-//         console.log('UNDER THE BRIDGE FOR YOU. YOU LOST!')
-//     } else{
-//         console.log('This function is broken!')
-//     }
-// }
-
-// console.log(game(5))
 
 const rock = document.querySelector('.rock-selection')
 
