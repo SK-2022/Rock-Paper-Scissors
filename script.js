@@ -7,35 +7,40 @@ function getComputerChoice() {
 let computerScore = 0
 let playerScore = 0
 
+const playerScoreCount = document.querySelector('.player-score')
+const computerScoreCount = document.querySelector('.computer-score')
+const matchResult = document.querySelector('.match-result')
+const finalMatchResult = document.querySelector('.final-match-result')
+
 function playRound (playerSelection, computerSelection){
     computerSelection = getComputerChoice()
     //Gets playerSelection from a prompt which converts the input to a lowercase string.
     playerSelection = playerSelection.toLowerCase()
 
     if(computerSelection === playerSelection){
-        console.log( "Heads lock! It's a tie!!")
+        matchResult.innerText = "Heads lock! It's a tie!!"
     } else if(computerSelection === 'rock' && playerSelection === "paper"){
         playerScore++;
-        console.log( "Paper beats Rock! You win!")
+        matchResult.innerText = "Paper beats Rock! You win!"
     } else if(computerSelection === 'paper' && playerSelection === "scissors"){
         playerScore++;
-        console.log( "Scissors beats Paper! You win!")
+        matchResult.innerText = "Scissors beats Paper! You win!"
     } else if(computerSelection === 'scissors' && playerSelection === 'rock'){
         playerScore++;
-        console.log( "Rock beats paper! You win")
+        matchResult.innerText = "Rock beats paper! You win"
     } else if(computerSelection === 'rock' && playerSelection === 'scissors') {
         computerScore++;
-        console.log( "You lose! Scissors beats Paper")
+        matchResult.innerText = "You lose! Scissors beats Paper"
     } else if(computerSelection === 'paper' && playerSelection === 'rock'){
         computerScore++;
-        console.log( "You lose! Paper beats Rock")
+        matchResult.innerText = "You lose! Paper beats Rock"
     } else if(computerSelection === 'scissors' && playerSelection === 'paper') {
         computerScore++;
-        console.log( "You lose! Scissors beats paper")
+        matchResult.innerText = "You lose! Scissors beats paper"
     } else {
-        console.log( "Input Error")
+        matchResult.innerText = "Input Error"
     }
-
+    
 }
 
 // function game(numberOfRounds){
