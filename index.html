@@ -10,15 +10,35 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <button class="rock-selection">Rock</button>
-    <button class="paper-selection">Paper</button>
-    <button class="scissors-selection">Scissors</button>
+    <audio src="./audio/JoJo's Bizarre Adventure Stardust Crusaders OST - Stardust Crusaders-NFjE5A4UAJI-160k-1655689041673.mp3" loop controls></audio>
+    <section class="options-section">
+      <div>
+        <img src="./images/funny rock.jpeg" alt="">
+        <button class="rock-selection">Rock</button>
+      </div>
+      <div>
+        <img src="./images/Ancient paper.jpeg" alt="">
+        <button class="paper-selection">Paper</button>
+      </div>
+      <div>
+        <img src="./images/scissors with teeth by oliver marinkoski.jpeg" alt="">
+        <button class="scissors-selection">Scissors</button>
+      </div>
+    </section>
+
     <div class="match-details-display">
-      <p class="player-score">0</p>
-      <p class="computer-score">0</p>
-      <p class="match-result">Click a button to start Playing</p>
-      <p class="final-match-result"></p>
+      <p>
+        Player Score : <span class="player-score">0</span>
+      </p>
+      <p>
+      Computer Score : <span class="computer-score">0</span>
+      </p> 
     </div>
+        <div class="match-result-display">
+          <p class="match-result">Click a button to start Playing</p>
+          <p class="final-match-result"></p>
+        </div>
+    
     <script src="./script.js"></script>
   </body>
 </html>
