@@ -1,3 +1,20 @@
+* {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Delicious Handrawn", "sans-serif";
+}
+
+.game-title-heading ,.selection-heading{
+text-align: center;
+font-size: 5rem;
+}
+
+.selection-heading{
+    font-size: 3rem;
+}
+
 .options-section{
     display: flex;
     justify-content: space-evenly;
@@ -5,17 +22,22 @@
 
 img {
     height: 20rem;
-    border: 2px black double ;
 }
 
 .match-details-display{
+    font-size: 4rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
 }
 
 .match-result-display{
+    font-size: 3rem;
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.play-again-button{
+    font-family: "Delicious Handrawn";
 }
