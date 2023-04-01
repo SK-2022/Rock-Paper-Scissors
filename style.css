@@ -40,4 +40,16 @@ img {
 
 .play-again-button{
     font-family: "Delicious Handrawn";
+    margin: 1rem;
+}
+
+.footer{
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+a {
+    font-family: "Delicious Handrawn";
+    font-size: 2rem;
 }
