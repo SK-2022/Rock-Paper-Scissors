@@ -46,9 +46,9 @@ function playRound (playerSelection, computerSelection){
         } else {
             matchResult.innerText = "Input Error"
         }
-
+    }
     // Winner and loser of the entire game will be determined with these conditions
-    } else if(playerScore === 5) {
+    if (playerScore === 5) {
         finalMatchResult.innerText = "JACKPOT BABY, YOU WON!"
     } else if(computerScore === 5) {
         finalMatchResult.innerText = "UNDER THE BRIDGE FOR YOU! YOU LOST!"
