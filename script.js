@@ -17,7 +17,7 @@ function playRound (playerSelection, computerSelection){
     computerSelection = getComputerChoice()
     //Gets playerSelection and converts the input to lowercase.
     playerSelection = playerSelection.toLowerCase()
-
+    //Logic of the game Rock paper scissors
     if(computerSelection === playerSelection){
         matchResult.innerText = "Heads lock! It's a tie!!"
     } else if(computerSelection === 'rock' && playerSelection === "paper"){
@@ -45,8 +45,9 @@ function playRound (playerSelection, computerSelection){
     playerScoreCount.innerText = playerScore
     computerScoreCount.innerText = computerScore
 
+    //Logic to display winner/loser and game continuation as well as stop the function. 
     if(computerScore < 5 && playerScore < 5) {
-        finalMatchResult.innerText = "No winner just yet...."
+        finalMatchResult.innerText =" The battle continues..."
     } else if(playerScore === 5) {
         finalMatchResult.innerText = "JACKPOT BABY, YOU WON!"
     } else if(computerScore === 5) {
@@ -57,6 +58,7 @@ function playRound (playerSelection, computerSelection){
 
 }
 
+//Selects the relevant class and gives the ability to make the playround function occur when the images are clicked.
 const rock = document.querySelector('.rock-selection')
 
 rock.addEventListener('click', () => {
@@ -70,7 +72,13 @@ paper.addEventListener('click', () => {
 })
 
 const scissors = document.querySelector('.scissors-selection')
-//Does the same as above, simply with a slightly different syntax
+//The same as the above event listeners, simply with a slightly different syntax around the function.
 scissors.addEventListener('click', function (e) {
     playRound('paper', getComputerChoice())
+})
+
+
+const playAgainButton = document.querySelector('.play-again-button')
+playAgainButton.addEventListener('click', () => {
+    window.location.reload()
 })
